@@ -17,7 +17,7 @@ class Inchoo_LoginAsCustomer_CustomerController extends Mage_Core_Controller_Fro
         if (isset($info['website_id'])
             && isset($info['customer_id'])
             && isset($info['timestamp'])
-            && (time() < ($info['timestamp'] + 5))) { /* 5 second validity for request */
+            && (time() < ($info['timestamp'] + 60))) { /* 60 second validity for request */
 
                 $customerSession = Mage::getSingleton('customer/session');
 
